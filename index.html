@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="AV65Vpa674bx_WF4TzXht-J-UC2jPWkkhJF45AqMu4U" />
-    <title>Emergency Ambulance Service And Hoapital Equipments Rent/Sale</title>
+    <title>Emergency Ambulance Service And Hospital Equipments Rent/Sale</title>
     <style>
         /* General Styles */
         body {
-            font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+            font-family: Cambria, Georgia, Times, 'Times New Roman', serif, sans-serif;
             margin: 0;
-            size-adjust: 40px;
             padding: 0;
             color: #201f1f;
         }
@@ -23,45 +22,41 @@
             position: sticky;
             top: 0;
             z-index: 10;
-            font-style: D:\CodeWithPradumbh\eambulanceservice\Rubik_Wet_Paint
-            font-weight: 200;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-left: 100px;
-            padding-right: 100px;
-            height: 100px;
+            padding: 0 20px;
+            height: auto;
+        }
+
+        .logo-container img {
+            height: 80px;
+            width: auto;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
-            text-align: center;
+            margin: 0;
             display: flex;
-            width: 100%;
-            justify-content: space-around;
-            height: 30px;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
         nav ul li {
-            font-size: x-large;
+            font-size: 1rem;
             font-weight: 200;
-          
-
         }
 
         nav ul li a {
             color: #fff;
-            text-decoration: chocolate;
+            text-decoration: none;
             transition: color 0.2s ease;
-
         }
 
         nav ul li a:hover {
-
             color: #eb780e;
             font-style: italic;
-            font-size: xx-large;
             font-weight: 200;
         }
 
@@ -74,34 +69,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            animation: fadeIn 10s ease-in;
-
-        }
-
-
-        .image-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-
-        }
-
-        @keyframes run {
-            0% {
-                left: -150px;
-            }
-
-            50% {
-                left: calc(100% + 150px);
-            }
-
-            100% {
-                left: -150px;
-            }
+            background: url('Background images.webp') no-repeat center center/cover;
         }
 
         .about,
@@ -119,7 +87,6 @@
                 transform: translateY(20px);
                 opacity: 0;
             }
-
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -136,13 +103,13 @@
         .project-content {
             display: flex;
             align-items: center;
-            gap: 40px;
+            gap: 20px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .image {
-            flex: 1;
-            min-width: 300px;
+            flex: 1 1 300px;
         }
 
         .image img {
@@ -158,12 +125,11 @@
         }
 
         .text {
-            flex: 2;
-            min-width: 300px;
+            flex: 1 1 300px;
         }
 
         .text h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #333;
             margin-bottom: 20px;
             position: relative;
@@ -180,7 +146,7 @@
         }
 
         .text p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #666;
             margin-bottom: 20px;
             line-height: 1.8;
@@ -203,127 +169,96 @@
             transform: translateY(-2px);
         }
 
-        /* Footer Styles */
         footer {
             background-color: #333;
             color: #d6aeae;
             text-align: center;
             padding: 1rem 0;
-            margin-top: 2rem;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
-
-            .about-content,
-            .project-content {
+            header {
                 flex-direction: column;
                 text-align: center;
             }
-
-            .image,
-            .text {
-                flex: none;
-                width: 100%;
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .about-content,
+            .project-content {
+                flex-direction: column;
+            }
+            .text h2 {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <header >
-
+    <header>
         <div class="logo-container">
-            <img src="logo_new.png" alt="Company Logo" class="logo" style="background: white;" height="80" width="250">
+            <img src="logo_new.png" alt="Company Logo" class="logo">
         </div>
-
         <div>
-<h1> Emergency Ambulance Service And Hospital Equipments</h1>
-
+            <h1>Emergency Ambulance Service And Hospital Equipments</h1>
             <nav>
                 <ul>
-    
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a target="_blank" href="https://www.instagram.com/eambulanceservice/">Instagram</a></li>
-                        <li><a target="_blank" href="http://www.youtube.com/@eambulanceservice">YouTube</a></li>
-                        <li><a target="_blank" href="https://forms.gle/Qb3piW2RdP6FRAg4A">Contect NEW</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://www.instagram.com/eambulanceservice/" target="_blank">Instagram</a></li>
+                    <li><a href="http://www.youtube.com/@eambulanceservice" target="_blank">YouTube</a></li>
+                    <li><a href="https://forms.gle/Qb3piW2RdP6FRAg4A" target="_blank">Contact NEW</a></li>
                 </ul>
             </nav>
-
         </div>
-
-      
-        <div class="logo-container">
-            <a href="HospitalEquipments.html" >
-
-
-                <img src="logo_new.png" alt="Company Logo" class="logo" style="background: white;" height="80" width="250">
-            </a>
-        </div>
-
     </header>
 
-    <!-- Home Section -->
-    <section class="hero" id="home">
-        <img class="image" <source src="Background images.webp" type="video/mp4">
-        </img>
-    </section>
+    <section class="hero" id="home"></section>
 
-    
-
-    <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2> Best Ambulance Service for All over INDIA</h2>
+            <h2>Best Ambulance Service for All over INDIA</h2>
             <div class="project-content">
                 <div class="image">
                     <a href="cardic-ambulance.html">
-                        <img src="cardiac ambulance.png" alt="frontend">
+                        <img src="cardiac ambulance.png" alt="Cardiac Ambulance">
                     </a>
-                    <H4>cardic-ambulance</H4>
+                    <h4>Cardiac Ambulance</h4>
                 </div>
                 <div class="image">
-                    
-                    <img src="Hero_Ambulance.jpg" alt="Project 2"> <!-- Replace with project image -->
-                    <p></p>
+                    <img src="Hero_Ambulance.jpg" alt="Hero Ambulance">
+                    <p>Project 2 Description</p>
                 </div>
                 <div class="image">
-                    
-                    <img src="ECCO_AMBULANCE.jpg" alt="Project 3"> <!-- Replace with project image -->
+                    <img src="ECCO_AMBULANCE.jpg" alt="Ecco Ambulance">
                     <p>Project 3 Description</p>
                 </div>
                 <div class="image">
-                    <img src="ambulance-toyota-kijang-innova.png" alt="frontend"> <!-- Replace with project image -->
+                    <img src="ambulance-toyota-kijang-innova.png" alt="Toyota Innova Ambulance">
                     <p>Project 4 Description</p>
                 </div>
                 <div class="image">
-                    <img src="Ambulance-Omni-PNG-Photo.png" alt="frontend"> <!-- Replace with project image -->
+                    <img src="Ambulance-Omni-PNG-Photo.png" alt="Omni Ambulance">
                     <p>Project 5 Description</p>
                 </div>
                 <div class="image">
-                    <img src="Oxygen-cylinder-.png" alt="frontend"> <!-- Replace with project image -->
-                    <p>Project 5 Description</p>
-                </div>
-
-            </div>
-        </div>
+                    <img src="Oxygen-cylinder-.png" alt="Oxygen Cylinder">
+                    <p>Project 6 Description</p>
+                    </div>
+                    </div>
         </div>
     </section>
 
-    
-
-    <!-- Contact Section -->
-
     <section class="contact" id="contact">
         <div class="contact-info">
-
             <h2 style="color:red;">Contact Information</h2>
             <p>Email: Pradumbh.kourav.tec@gmail.com</p>
             <p>Phone: +91-9171611702</p>
-            <p>Address: Scheme Number 78, Part II, Scheme 78, Vijay Nagar, Indore, Madhya Pradesh 452010</p>
+            <p>Address: Scheme Number 78, Part II, Vijay Nagar, Indore, Madhya Pradesh 452010</p>
             <form>
                 <h4>Send Me a Message</h4>
                 <input type="text" placeholder="Your Name" required>
@@ -331,14 +266,12 @@
                 <textarea placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
+            <a href="tel:983489348943"><button class="btn">Call Me</button></a>
         </div>
-<a href="tel:983489348943">
-    <button type="submit" class="btn">Call Me</button>
-</a>
     </section>
 
     <footer>
-        <p>&copy; 2024 Emergency Ambulance Service And Hoapital Equipments Rent/Sale. All rights reserved.</p>
+        <p>&copy; 2024 Emergency Ambulance Service And Hospital Equipments Rent/Sale. All rights reserved.</p>
     </footer>
 </body>
 
