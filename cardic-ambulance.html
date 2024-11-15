@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambulance Details</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #0066cc;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #004b99;
+    }
+</style>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maiores atque eaque? Veniam a tempora laboriosam autem, laudantium vitae obcaecati omnis, voluptatem atque assumenda, qui laborum corporis nobis cum repudiandae? Ea adipisci nulla omnis repellat harum, corrupti dolorum molestias voluptatem sunt illo aut hic tempora voluptatum dignissimos at maiores quo et? Veniam eveniet dolorum provident iusto excepturi praesentium eos labore perspiciatis minima architecto! Quo consequatur, autem sequi nam repellendus officiis. Nisi deserunt aliquam quaerat excepturi modi, voluptatibus quam, eum dolores voluptatum alias placeat temporibus tempore aliquid animi maiores commodi! Expedita iusto aperiam repellat ullam distinctio ipsam magnam consectetur possimus provident et, sapiente illo voluptatem quisquam voluptates nisi eveniet dicta reprehenderit amet ex non veritatis explicabo, ut optio? Dolore, at nam libero cupiditate impedit in assumenda harum vel molestias suscipit nobis placeat enim atque esse, dicta optio odit repellendus eum, consectetur nihil quisquam corrupti tempora! In ducimus beatae animi voluptatem, veritatis ipsa dignissimos id recusandae dolorum aliquid velit quas maiores asperiores ex fuga explicabo sunt expedita laboriosam optio? Debitis totam quia perferendis, atque sint recusandae, ea ab rerum magnam repellendus eligendi pariatur. Explicabo excepturi laborum adipisci temporibus reiciendis! Doloremque distinctio excepturi, facilis fugit unde atque quo dolor? Excepturi, totam, sed quo tenetur veniam distinctio rerum nemo, error laborum dolores quisquam corrupti debitis. Hic, voluptates sequi. Quis suscipit, tenetur nihil officiis doloribus exercitationem, eaque dicta laudantium minus ad incidunt maxime iusto totam distinctio doloremque delectus. Error quas aliquam doloremque quia voluptatum quam harum nam animi corrupti veritatis ex veniam aperiam aut vitae obcaecati reprehenderit, beatae minima maiores culpa modi eaque nostrum inventore nesciunt in! Error illo magni ab vitae dicta modi nostrum sed, quaerat explicabo mollitia inventore qui alias architecto, incidunt eos corporis ipsam odit doloribus ea voluptatem dignissimos! Quos, accusantium. Autem ipsam quas iusto officiis exercitationem in dignissimos ducimus molestias eveniet.</p>
+<div class="container">
+    <h1>Ambulance Details</h1>
+    <form id="ambulanceForm">
+        <div class="form-group">
+            <label for="ambulanceId">Ambulance ID:</label>
+            <input type="text" id="ambulanceId" required>
+        </div>
+        <div class="form-group">
+            <label for="driverName">Driver Name:</label>
+            <input type="text" id="driverName" required>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="equipment">Equipment (comma-separated):</label>
+            <input type="text" id="equipment" required>
+        </div>
+        <div class="form-group">
+            <label for="availability">Availability:</label>
+            <select id="availability" required>
+                <option value="Available">Available</option>
+                <option value="Not Available">Not Available</option>
+            </select>
+        </div>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+<script>
+    const googleScriptURL = 'YOUR_GOOGLE_WEB_APP_URL'; // Replace with your deployed Google Apps Script URL
+
+    async function submitForm() {
+        const ambulanceId = document.getElementById('ambulanceId').value;
+        const driverName = document.getElementById('driverName').value;
+        const contactNumber = document.getElementById('contactNumber').value;
+        const equipment = document.getElementById('equipment').value;
+        const availability = document.getElementById('availability').value;
+
+        const formData = {
+            ambulanceId,
+            driverName,
+            contactNumber,
+            equipment,
+            availability,
+        };
+
+        try {
+            // Send data to Google Sheets
+            const response = await fetch(googleScriptURL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Ambulance details submitted successfully!');
+                document.getElementById('ambulanceForm').reset();
+            } else {
+                alert('Failed to submit details.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error submitting the form.');
+        }
+    }
+</script>
 </body>
 </html>
