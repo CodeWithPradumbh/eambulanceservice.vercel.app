@@ -1,135 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ambulance Details</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambulance Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-    .container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-    h1 {
-        text-align: center;
-        color: #0066cc;
-    }
+        h1 {
+            text-align: center;
+            color: #0066cc;
+        }
 
-    .form-group {
-        margin-bottom: 15px;
-    }
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-    .form-group input,
-    .form-group select,
-    button {
-        width: 100%;
-        padding: 10px;
-        margin: 5px 0;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+        .form-group input,
+        .form-group select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-    button {
-        background-color: #0066cc;
-        color: white;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.3s ease;
-    }
+        button {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
 
-    button:hover {
-        background-color: #004b99;
-    }
-</style>
+        button:hover {
+            background-color: #004b99;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-    <h1>Ambulance Details</h1>
-    <form id="ambulanceForm">
-        <div class="form-group">
-            <label for="ambulanceId">Ambulance ID:</label>
-            <input type="text" id="ambulanceId" required>
-        </div>
-        <div class="form-group">
-            <label for="driverName">Driver Name:</label>
-            <input type="text" id="driverName" required>
-        </div>
-        <div class="form-group">
-            <label for="contactNumber">Contact Number:</label>
-            <input type="tel" id="contactNumber" required>
-        </div>
-        <div class="form-group">
-            <label for="equipment">Equipment (comma-separated):</label>
-            <input type="text" id="equipment" required>
-        </div>
-        <div class="form-group">
-            <label for="availability">Availability:</label>
-            <select id="availability" required>
-                <option value="Available">Available</option>
-                <option value="Not Available">Not Available</option>
-            </select>
-        </div>
-        <button type="button" onclick="submitForm()">Submit</button>
-    </form>
-</div>
+    <div class="container">
+        <h1>Ambulance Details</h1>
+        <form id="ambulanceForm">
+            <div class="form-group">
+                <label for="ambulanceId">Ambulance ID:</label>
+                <input type="text" id="ambulanceId" required>
+            </div>
+            <div class="form-group">
+                <label for="driverName">Driver Name:</label>
+                <input type="text" id="driverName" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" id="contactNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="equipment">Equipment (comma-separated):</label>
+                <input type="text" id="equipment" required>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability:</label>
+                <select id="availability" required>
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+            </div>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
 
-<script>
-    const googleScriptURL = 'https://bit.lD'         Replace with your deployed Google Apps Script URL
+    <script>
+        const googleScriptURL = 'https://sac            fycbyPWLLQ7nHzAq6j2uOVQGJmoase_E0yfLeiwYvDHBkfRV1TlqFd-a403FkcsPpmFT4O/exec'
 
-    async function submitForm() {
-        const ambulanceId = document.getElementById('ambulanceId').value;
-        const driverName = document.getElementById('driverName').value;
-        const contactNumber = document.getElementById('contactNumber').value;
-        const equipment = document.getElementById('equipment').value;
-        const availability = document.getElementById('availability').value;
+        async function submitForm() {
+            const                    ceId = document.getElementB                    .value;
+      const driverName = document.getElementById('            Name').value;
+            const contactNumber = document.getElementByI                    tactNumber').value;
+            const equipment = document.getElementById('e                    nt').value;
+            const availability = document.getElementById                    lability').value;
 
-        const formData = {
-            ambulanceId,
-            driverName,
-            contactNumber,
-            equipment,
-            availability,
-        };
+            const formData = {
+                ambulanceId,
+                driverName,
+                Number,
+                ment,
+                bility,
+            };
 
-        try {
-            // Send data to Google Sheets
-            const response = await fetch(https://bit.ly/3QI7fADURL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+            try {
+               Send data to G        Sheets
+        con            nse = await fetch(googleScriptU                     method: 'POST',
+                headers: {
+                    'C                e': 'application/                      body: JSON.stringify(formData),
             });
 
-            const result = await response.json();
-            if (result.success) {
-                alert('Ambulance details submitted successfully!');
-                document.getElementById('ambulanceForm').reset();
-            } else {
-                alert('Failed to submit details.');
+                const result = await         n();
+                (result.success) {
+                    alert('Am          details submitted succe              ;
+          document.getElementById('ambulanceForm')              
+        } else {
+                    alert('Failed to submi          s.');
+                } catch (error) {
+        consol          'Error:', error);
+        a          ror submitting the form.');
+                }
             }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error submitting the form.');
-        }
-    }
-</script>
+        </script>
 </body>
+
 </html>
